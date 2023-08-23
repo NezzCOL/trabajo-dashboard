@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    background-color: gray;
+}
+
+.content-login {
+    background-color: #fff;
+    margin-left: 37rem;
+    align-content: centerx;
+    display: grid;
+    margin-right: 25rem;
+}
