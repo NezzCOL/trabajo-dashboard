@@ -20,7 +20,7 @@ body img {
     width: 400px;
     background: rgba(255, 255, 255, 0.288);
     border-radius: 10px;
-    backdrop-filter: blur(3rem);
+    backdrop-filter: blur(2rem);
 }
 
 .content-login h2{
@@ -54,6 +54,11 @@ form .usuario{
     border-bottom: 2px solid #adadad;
     background: none;
     outline: none;
+}
+
+input {
+    background-color: transparent;
+    color: #fff;
 }
 
 input::placeholder {
@@ -143,7 +148,7 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: #1994b3;
     transition: .5s;
-    transform: scale(0.9);
+    transform: scale(0.98);
 }
 
 /* ========================= */
