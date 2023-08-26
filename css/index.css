@@ -56,6 +56,10 @@ form .usuario{
     outline: none;
 }
 
+input {
+    color: #fff;
+}
+
 input::placeholder {
     color: #fff;
 }
@@ -143,7 +147,7 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: #1994b3;
     transition: .5s;
-    transform: scale(0.9);
+    transform: scale(0.98);
 }
 
 /* ========================= */
