@@ -60,7 +60,7 @@
 	</svg>
     <div class="content-login">
         <h2>Iniciar Sesión</h2>
-        <form action="validaciones/validar-index.php" method="post">
+        <form action="../trabajo-dashboard/validaciones/validaciones-de-login-index/validar-index.php" method="post">
             <div class="usuario">
                 <input type="text" required placeholder="Nombre de usuario" name="usuario">
             </div>
@@ -69,8 +69,8 @@
             </div>
             <input type="submit" value="Iniciar" name="btn"><br>
             <?php
-                include("validaciones/db.php");
-                include("validaciones/validar-index.php");
+                include("validaciones/validaciones-de-login-index/db.php");
+                include("validaciones/validaciones-de-login-index/validar-index.php");
             ?>
             <br>
          </form>

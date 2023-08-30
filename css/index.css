@@ -56,6 +56,10 @@ form .usuario{
     outline: none;
 }
 
+input {
+    color: #fff;
+}
+
 input::placeholder {
     color: #fff;
 }

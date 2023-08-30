@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    hola
+    <header class="content">
+        <nav class="navbar">
+            
+        </nav>
+    </header>
 </body>
 </html>

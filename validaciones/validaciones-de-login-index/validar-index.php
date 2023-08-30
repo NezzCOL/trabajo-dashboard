@@ -12,7 +12,7 @@ if(!empty($_POST["btn"])){
     $filas = mysqli_num_rows($resultado);
 
     if($filas){
-        header("location: ../pagina/pagina-inicio.php");
+        header("location: ../../../../../trabajo-dashboard/pagina/pagina-inicio.php");
     }else{
         echo "<div class='error'>Error, datos incorrectos</div>";
     }
