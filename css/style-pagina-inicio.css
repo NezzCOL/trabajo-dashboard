@@ -14,17 +14,77 @@
     height: 3rem;
     background-color: rgb(53, 53, 53);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.navbar .button-icon {
+    background: none;
+    font-size: 2rem;
+    margin-left: 97%;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.500);
+        
+    }
+}
+
+.navbar .button-icon i {
+    color: #fff;
+    margin-top: -0.1rem;
 }
 
 .sidebar {
+    margin-top: 3rem;
     position: fixed;
-    width: 12rem;
+    width: 13rem;
     height: 100%;
     background-color: rgb(53, 53, 53);
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Cambio aquí */
+    align-items: center; /* Agregado aquí */
+    justify-content: flex-start;
     box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
 }
 
+.sidebar .text-1 {
+    margin-top: 2rem;
+    width: 75%;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(131, 131, 131, 0.500);
+        color: #fff;
+    }
+}
+
+.sidebar .text-1 p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.sidebar .text-2 {
+    margin-top: 1rem;
+    width: 75%;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(131, 131, 131, 0.500);
+        color: #fff;
+    }
+}
+
+.sidebar .text-2 p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
