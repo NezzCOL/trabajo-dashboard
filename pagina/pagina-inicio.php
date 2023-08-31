@@ -10,7 +10,7 @@
 <body>
     <header class="content-navbar">
         <nav class="navbar">  
-            <button class="button-icon"><i class='bx bx-menu'></i></button>
+            <button class="button-icon"><i class='bx bxs-cog'></i></button>
         </nav>
     </header>
     <aside class="content-sidebar">
