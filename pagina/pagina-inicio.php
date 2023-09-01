@@ -10,15 +10,16 @@
 <body>
     <header class="content-navbar">
         <nav class="navbar">  
-            <button class="button-icon"><i class='bx bxs-cog'></i></button>
+            <button class="button-icon1"><i class='bx bx-menu'></i></button>
+            <button class="button-icon2 toggle"><i class='bx bxs-cog'></i></button>
         </nav>
     </header>
     <aside class="content-sidebar">
-        <nav class="sidebar">
-            <button class="text-1"><p>INICIO</p></button>
-
-            <button class="text-2"><p>Registrar Usuario</p></button>
+        <nav class="sidebar close">
+            <button class="text-1"><p class="text-sd">INICIO</p></button>
+            <button class="text-2"><p class="text-sd">Registrar Usuario</p></button>
         </nav>
     </aside>
 </body>
+<script src="../../trabajo-dashboard/js/js-menu-sidebar.js/sidebar.js"></script>
 </html>
