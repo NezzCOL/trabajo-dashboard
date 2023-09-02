@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background-color: #fff;
+}
+
 .content-header {
     width: 100%;
     height: 100hv;
@@ -18,18 +22,38 @@
     z-index: 10;
 }
 
-.navbar .button-icon2 {
+.navbar .button-icon1 {
     background: none;
     font-size: 2rem;
     width: 2.1rem;
-    margin-left: 94%;
+    margin-left: 1.2rem;
     margin-top: 0.4rem;
     margin-bottom: 0.5rem;
     border-radius: .5rem;
     cursor: pointer;
     &:hover {
         background-color: rgba(128, 128, 128, 0.500);
-        
+    }
+}
+
+.navbar .button-icon1 i {
+    color: #fff;
+    display: flex;
+    font-size: 1.7rem;
+    justify-content: center;
+}
+
+.navbar .button-icon2 {
+    background: none;
+    font-size: 2rem;
+    width: 2.1rem;
+    margin-left: 93%;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.500);
     }
 }
 
@@ -37,35 +61,13 @@
     color: #fff;
     display: flex;
     font-size: 1.5rem;
-    margin-left: 0.2rem;
-}
-
-.navbar .button-icon1 {
-    background: none;
-    font-size: 2rem;
-    width: 2.1rem;
-    margin-left: 0.5rem;
-    margin-top: 0.4rem;
-    margin-bottom: 0.5rem;
-    border-radius: .5rem;
-    cursor: pointer;
-    &:hover {
-        background-color: rgba(128, 128, 128, 0.500);
-        
-    }
-}
-
-.navbar .button-icon1 i {
-    color: #fff;
-    display: flex;
-    font-size: 1.5rem;
-    margin-left: 0.2rem;
+    justify-content: center;
 }
 
 .sidebar {
     margin-top: 3rem;
     position: fixed;
-    width: 13rem;
+    width: 15rem;
     height: 100%;
     background-color: rgb(53, 53, 53);
     display: flex;
@@ -73,29 +75,18 @@
     align-items: center;
     justify-content: flex-start;
     box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
-
-    &.close {
-        width: 4rem;
-    }
-}
-
-.sidebar.close~ {
-    left: 78px;
-    height: 100vh;
-    width: calc(100% -78px);
-}
-
-.text-sd {
-    opacity: 0;
+    transition: 0.3s;
 }
 
 .sidebar .text-1 {
-    margin-top: 2rem;
-    width: 75%;
-    border-radius: 1rem;
+    margin-top: 1.5rem;
+    width: 80%;
+    border-radius: 0.6rem;
     background-color: transparent;
     color: #fff;
     cursor: pointer;
+    display: flex;
+    align-items: center;
     &:hover {
         background-color: rgb(131, 131, 131, 0.500);
         color: #fff;
@@ -106,15 +97,24 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 1rem;
+    margin-left: 1.9rem;
+}
+
+.sidebar i {
+    font-size: 1.5rem;
+    width: 2rem;
+    margin-left: 0.4rem;
 }
 
 .sidebar .text-2 {
     margin-top: 1rem;
-    width: 75%;
-    border-radius: 1rem;
+    width: 80%;
+    border-radius: 0.6rem;
     background-color: transparent;
     color: #fff;
     cursor: pointer;
+    display: flex;
+    align-items: center;
     &:hover {
         background-color: rgb(131, 131, 131, 0.500);
         color: #fff;
@@ -125,4 +125,86 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 1rem;
+    margin-left: 0.8rem;
+}
+
+.desplegar {
+    transform: translateX(-68%);
+    transition: 0.3s;
+}
+
+.desplegar .text-1 p {
+    display: none;
+}
+
+.desplegar .text-2 p {
+    display: none;
+}
+
+.desplegar .text-1 {
+    width: 20%;
+    margin-left: 10rem;
+    transition: 0.3s;
+}
+
+.desplegar .text-2 {
+    width: 20%;
+    margin-left: 10rem;
+    transition: 0.3s;
+}
+
+.desplegar .text-1 i {
+    margin-top: 0.5rem;
+    margin-bottom: 5px;
+}
+
+.desplegar .text-2 i {
+    margin-top: 0.5rem;
+    margin-bottom: 5px;
+}
+
+.menu-opciones {
+    position: absolute;
+    top: 100%;
+    right: 1%;
+    width: 13rem; 
+}
+
+.menu-opciones {
+    display: none;
+}
+
+.content-menu {
+    background-color: #fff;
+    padding: 1.2rem;
+    margin: 0.6rem;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+.menu hr{
+    border: 0;
+    height: 0.1rem;
+    width: 100%;
+    background: #ccc;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu button {
+    width: 100%;
+    border: none;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+.menu button:active {
+    background-color: #ccc;
+}
+
+.menu button p {
+    margin-top: 0.3rem;
+    margin-bottom: 3px;
+    margin-left: 0.4rem;
+    margin-right: 0.5rem;
 }
