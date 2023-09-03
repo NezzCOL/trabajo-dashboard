@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Usuario</title>
     <link rel="stylesheet" href="../css/style-pagina-inicio.css">
+    <link rel="stylesheet" href="../css/registro-usuario.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -30,7 +31,7 @@
         </nav>
     </aside>
     <main>
-        
+        <h1>Registro de Usuario</h1>
     </main>
 </body>
 <script src="../../trabajo-dashboard/js/js-menu-sidebar.js/sidebar.js"></script>
