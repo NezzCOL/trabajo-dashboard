@@ -24,14 +24,24 @@
             </div>
         </nav>
     </header>
-    <aside class="content-sidebar">
-        <nav class="sidebar" id="aside">
-            <button class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
-            <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
-        </nav>
-    </aside>
     <main>
-        <h1>Registro de Usuario</h1>
+        <aside class="content-sidebar">
+            <nav class="sidebar" id="aside">
+                <button class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
+                <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
+            </nav>
+            <div class="container">
+                <div class="main-content">
+                    <h1>Registro de Usuario</h1>
+
+                    <div class="content-form">
+                        <form action="../../trabajo-dashboard/validaciones/validaciones pagina/validaciones-registro-usuarios.php" method="post">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </aside>
     </main>
 </body>
 <script src="../../trabajo-dashboard/js/js-menu-sidebar.js/sidebar.js"></script>

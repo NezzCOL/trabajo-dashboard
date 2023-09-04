@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    margin-left: 4.8rem;
+    height: 40rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    text-align: center;
+}
+

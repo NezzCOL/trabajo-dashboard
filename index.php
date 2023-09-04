@@ -65,7 +65,7 @@
                 <input type="text" required placeholder="Nombre de usuario" name="usuario">
             </div>
             <div class="contraseña">
-                <input type="text" required placeholder="Contraseña" name="contraseña">
+                <input type="password" required placeholder="Contraseña" name="contraseña">
             </div>
             <input type="submit" value="Iniciar" name="btn"><br>
             <?php
