@@ -4,12 +4,66 @@
     height: 40rem;
 }
 
+.main-content h1 {
+    padding-bottom: 1.5rem;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
     align-items: center;
     height: 25vh;
     text-align: center;
 }
 
+.tip_doc label {
+    margin-right: 20rem;
+}
+
+.tip_doc input{
+    margin-right: 16rem;
+    width: 13rem;
+    height: 1.3rem;
+    margin-top: 0.2rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+}
+
+.tip_doc input:focus {
+    background-color: #fff;
+}
+
+.tip_doc {
+    height: 0;
+}
+
+.num-doc {
+    margin-left: 23rem;
+}
+
+.num-doc label {
+    margin-right: 13.5rem;
+}
+
+.num-doc input{
+    margin-left: -11rem;
+    width: 13rem;
+    height: 1.3rem;
+    margin-top: 0.2rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+}
+
+.num-doc input:focus {
+    background-color: #fff;
+}
+
+.content1 {
+    margin-left: 3rem;
+}

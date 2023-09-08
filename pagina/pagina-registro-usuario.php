@@ -36,7 +36,16 @@
 
                     <div class="content-form">
                         <form action="../../trabajo-dashboard/validaciones/validaciones pagina/validaciones-registro-usuarios.php" method="post">
-
+                            <div class="content1">
+                                <div class="tip_doc">
+                                    <label for="">Tipo de documento</label><br>
+                                    <input type="text" required>
+                                </div>
+                                <div class="num-doc">
+                                    <label for="">Número de documento</label><br>
+                                    <input type="number" required>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
