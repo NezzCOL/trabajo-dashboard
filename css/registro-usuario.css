@@ -18,11 +18,15 @@
     text-align: center;
 }
 
+.content-form {
+    margin-left: 1.5rem;
+}
+
 .tip_doc label {
     margin-right: 20rem;
 }
 
-.tip_doc input{
+.tip_doc select{
     margin-right: 16rem;
     width: 13rem;
     height: 1.3rem;
@@ -33,7 +37,7 @@
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
 }
 
-.tip_doc input:focus {
+.tip_doc select:focus {
     background-color: #fff;
 }
 
@@ -43,6 +47,7 @@
 
 .num-doc {
     margin-left: 23rem;
+    padding-bottom: 0.8rem;
 }
 
 .num-doc label {
@@ -64,6 +69,170 @@
     background-color: #fff;
 }
 
-.content1 {
+.content1-form {
     margin-left: 3rem;
+}
+
+.nombre {
+    margin-right: 5rem;
+}
+
+.nombre label {
+    margin-right: 20rem;
+}
+
+.nombre input{
+    margin-right: 11rem;
+    width: 13rem;
+    height: 1.3rem;
+    margin-top: 0.2rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+}
+
+.nombre input:focus {
+    background-color: #fff;
+}
+
+.apellido {
+    margin-left: 23rem;
+    padding-bottom: 0.8rem;
+    margin-top: -2.8rem;
+}
+
+.apellido label {
+    margin-right: 19.8rem;
+}
+
+.apellido input{
+    margin-left: -11rem;
+    width: 13rem;
+    height: 1.3rem;
+    margin-top: 0.2rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+}
+
+.apellido input:focus {
+    background-color: #fff;
+}
+
+.correo {
+    margin-right: 5rem;
+}
+
+.correo label {
+    margin-right: 21rem;
+}
+
+.correo input{
+    margin-right: 11rem;
+    width: 13rem;
+    height: 1.3rem;
+    margin-top: 0.2rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+}
+
+.correo input:focus {
+    background-color: #fff;
+}
+
+.telefono {
+    margin-left: 23rem;
+    padding-bottom: 0.9rem;
+    margin-top: -2.8rem;
+}
+
+.telefono label {
+    margin-right: 20rem;
+}
+
+.telefono input{
+    margin-left: -11rem;
+    width: 13rem;
+    height: 1.3rem;
+    margin-top: 0.2rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+}
+
+.telefono input:focus {
+    background-color: #fff;
+}
+
+.rol label {
+    margin-right: 27.2rem;
+}
+
+.rol select{
+    margin-right: 16rem;
+    width: 13rem;
+    height: 1.3rem;
+    margin-top: 0.2rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+}
+
+.rol select:focus {
+    background-color: #fff;
+}
+
+.rol {
+    height: 0;
+}
+
+.contraseña {
+    margin-left: 23rem;
+    padding-bottom: 0.8rem;
+    margin-top: -0.1rem;
+}
+
+.contraseña label {
+    margin-right: 18.8rem;
+}
+
+.contraseña input{
+    margin-left: -11rem;
+    width: 13rem;
+    height: 1.3rem;
+    margin-top: 0.2rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+}
+
+.contraseña input:focus {
+    background-color: #fff;
+}
+
+.btn {
+    margin-left: 8rem;
+    padding-bottom: 0.8rem;
+}
+
+.btn input{
+    margin-right: 10rem;
+    margin-top: 1.4rem;
+    width: 13rem;
+    border-radius: 0.5rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-bottom: 0.2rem;
+    background-color: #cccccc59;
+}
+
+.btn input:active {
+    background-color: #fff;
 }
