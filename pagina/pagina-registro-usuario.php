@@ -39,44 +39,45 @@
                     <div class="content-form">
                         <form action="../validaciones/validaciones-pagina/validaciones-registro-usuarios.php" method="post">
                             <div class="content-form">
-                                <div class="tip_doc">
-                                    <label for="">Tipo de documento</label><br>
-                                    <select name='tip_doc' class='form-control'>
-                                        <?php
-                                            $tip_doc = 'Select * from sub_items where items_id = 1';
-                                            $query = mysqli_query($conexion, $tip_doc);
-                                            while ($documento = mysqli_fetch_array($query)) {
-                                                echo "<option value='".$documento['id']."'>"
-                                                        .$documento['descripcion_item'].
-                                                        "</option>";
-                                            }
-                                        ?>
-                                    </select>
-                                </div>
+                            <div class="tip_doc">
+                                <label for="">Tipo de documento</label><br>
+                                <select name='tip_doc' class='form-control'>
+                                    <?php
+                                        $consulta_tipos_documentos = 'SELECT id, descripcion_item FROM sub_items WHERE items_id = 1';
+                                        $resultado_tipos_documentos = mysqli_query($conexion, $consulta_tipos_documentos);
+                                        
+                                        while ($documento = mysqli_fetch_array($resultado_tipos_documentos)) {
+                                            echo "<option value='".$documento['id']."'>"
+                                                .$documento['descripcion_item'].
+                                                "</option>";
+                                        }
+                                    ?>
+                                </select>
+                            </div>
 
                                 <div class="num-doc">
                                     <label for="">Número de documento</label><br>
-                                    <input type="number" required>
+                                    <input type="number" name="num-doc" required>
                                 </div>
 
                                 <div class="nombre">
                                     <label for="">Nombre</label><br>
-                                    <input type="text" required>
+                                    <input type="text" name="nombre" required>
                                 </div>
 
                                 <div class="apellido">
                                     <label for="">Apellidos</label><br>
-                                    <input type="text" required>
+                                    <input type="text" name="apellido" required>
                                 </div>
 
                                 <div class="correo">
                                     <label for="">Correo</label><br>
-                                    <input type="email" required>
+                                    <input type="email" name="correo" required>
                                 </div>
 
                                 <div class="telefono">
                                     <label for="">Telefono</label><br>
-                                    <input type="number" required>
+                                    <input type="number" name="telefono" required>
                                 </div>
 
                                 <div class="rol">
@@ -96,11 +97,11 @@
 
                                 <div class="contraseña">
                                     <label for="">Contraseña</label><br>
-                                    <input type="password" required>
+                                    <input type="password" name="contraseña" required>
                                 </div>
                                 
                                 <div class="btn">
-                                    <input type="submit" value="Ingresar registro" class="registrar">
+                                    <input type="submit" value="Ingresar registro" name="registrar">
                                 </div>
                             </div>
                         </form><br><br><br>
@@ -111,7 +112,7 @@
                                 Usuarios Registrados
                             </div>
                             <div class="card-body">
-                                <table border='1'id="datatablesSimple">
+                                <table border='1' id="datatablesSimple">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -122,6 +123,7 @@
                                             <th>correo</th>
                                             <th>Teléfono</th>
                                             <th>Rol</th>
+                                            <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -129,24 +131,42 @@
                                     <?php
                                         $sql = "SELECT * FROM asistencias";
                                         $result = mysqli_query($conexion, $sql);
+                                        $contador = 1;
                                         while ($mostrar = mysqli_fetch_array($result)) {
                                             ?>
                                                 <tr>
-                                                    <td scope="row"><?php echo $$mostrar['id']?></td>
-                                                    <td><?php echo $$mostrar['documento'] ?></td>
-                                                    <td><?php echo $$mostrar['numero_documento'] ?></td>
-                                                    <td><?php echo $$mostrar['nombre'] ?></td>
-                                                    <td><?php echo $$mostrar['apellido'] ?></td>
-                                                    <td><?php echo $$mostrar['correo'] ?></td>
-                                                    <td><?php echo $$mostrar['telefono'] ?></td>
-                                                    <td><?php echo $$mostrar['Rol'] ?></td>
+                                                    <td scope="row"><?php echo $contador?></td>
+                                                    <?php
+                                                        $typeQuery = "SELECT * FROM sub_items WHERE items_id = 1 AND id = ".$mostrar['documento'];
+                                                        $typeResult = mysqli_query($conexion, $typeQuery);
+                                                        $typeRol = mysqli_fetch_assoc($typeResult);
+                                                    ?>
+                                                    <td><?php echo $typeRol['descripcion_item'] ?></td>
+                                                    <td><?php echo $mostrar['numero_documento'] ?></td>
+                                                    <td><?php echo $mostrar['nombre'] ?></td>
+                                                    <td><?php echo $mostrar['apellido'] ?></td>
+                                                    <td><?php echo $mostrar['correo'] ?></td>
+                                                    <td><?php echo $mostrar['telefono'] ?></td>
+                                                    <?php
+                                                        $rolQuery = "SELECT * FROM sub_items WHERE items_id = 2 AND id = ".$mostrar['rol'];
+                                                        $rolResult = mysqli_query($conexion, $rolQuery);
+                                                        $rolRow = mysqli_fetch_assoc($rolResult);
+                                                    ?>
+                                                    <td><?php echo $rolRow['descripcion_item'] ?></td>
+                                                    <td>
+                                                        
+                                                    </td>
                                                 </tr>
                                             <?php
+                                            $contador++;
                                         }
                                     ?>
                                     </tbody>
                                 </table>
                             </div>
+                            <?php
+                            include('../../trabajo-dashboard/validaciones/validaciones-pagina/validaciones-registro-usuarios.php')
+                            ?>
                         </div>
 
                     </div>

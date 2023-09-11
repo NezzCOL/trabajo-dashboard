@@ -1,25 +1,40 @@
 <?php
+$conexion = mysqli_connect("localhost", "root", "", "login");
 
-    include('/xampp/htdocs/trabajo-dashboard/validaciones/validaciones-de-login-index/db.php');
+if (isset($_POST['registrar'])) {
+    $tip_doc = $_POST['tip_doc'];
+    $num_doc = $_POST['num-doc'];
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $correo = $_POST['correo'];
+    $telefono = $_POST['telefono'];
+    $rol = $_POST['rol'];
+    $contraseña = $_POST['contraseña'];
 
-    if (isset($_POST['registrar'])) {
-        if (strlen($_POST['tip_doc']) >= 1 && strlen($_POST['num-doc']) >= 1 && strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1 && strlen($_POST['correo']) >= 1 && strlen($_POST['telefono']) >= 1 && strlen($_POST['rol']) >= 1 && strlen($_POST['contraseña']) >= 1) {
-            $MD5contraseña = md5($contraseña);
+    $MD5contraseña = md5($contraseña);
 
-            $tip_doc = $_POST['tip_doc'];
-            $num_doc = $_POST['num_doc'];
-            $nombre = $_POST['nombre'];
-            $apellido = $_POST['apellido'];
-            $correo = $_POST['correo'];
-            $telefono = $_POST['telefono'];
-            $rol = $_POST['rol'];
-            $contraseña = $_POST['contraseña'];
+    if (
+        strlen($tip_doc) >= 1 &&
+        strlen($num_doc) >= 1 &&
+        strlen($nombre) >= 1 &&
+        strlen($apellido) >= 1 &&
+        strlen($correo) >= 1 &&
+        strlen($telefono) >= 1 &&
+        strlen($rol) >= 1 &&
+        strlen($contraseña) >= 1
+    ) {
+        $consulta = "INSERT INTO asistencias(documento, numero_documento, nombre, apellido, correo, telefono, rol, contraseña) 
+                     VALUES ('$tip_doc','$num_doc','$nombre','$apellido','$correo','$telefono','$rol','$MD5contraseña')";
+        $resultado = mysqli_query($conexion, $consulta);
 
-            $consulta = "INSERT INTO asistencias(documento, numero_documento, nombre, apellido, correo, telefono, rol, contraseña) VALUES ('$tip_doc','$num_doc','$nombre','$apellido','$correo','$telefono','$rol','$MD5contraseña')";
-            $resultado = mysqli_query($conexion,$consulta);
-            
-            header("location: /../../../pagina/pagina-registro-usuario.php");
+        if ($resultado) {
+            header("Location: ../../../../../trabajo-dashboard/pagina/pagina-registro-usuario.php");
+        } else {
+            echo "Error en la inserción de datos: " . mysqli_error($conexion);
         }
+    } else {
+        echo "Por favor, complete todos los campos del formulario.";
     }
+}
 
 ?>
