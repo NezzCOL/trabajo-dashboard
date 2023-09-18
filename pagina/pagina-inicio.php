@@ -15,9 +15,9 @@
             <div class="menu-opciones" id="mostrar">
                 <div class="content-menu">
                     <div class="menu">
-                        <button><p>Cambiar Contraseña</p></button>
+                        <a href="cambiar-contraseña.php" class="camb-contraseña">Cambiar Contraseña</a>
                         <hr>
-                        <button><p>Cerrar Sesión</p></button>
+                        <a href="../index.php" class="cerrar-sesion">Cerrar Sesión</a>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
     </header>
     <aside class="content-sidebar">
         <nav class="sidebar" id="aside">
-            <button href="../../trabajo-dashboard/pagina/pagina-registro-usuario.php" class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
+            <button class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
             <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
         </nav>
     </aside>

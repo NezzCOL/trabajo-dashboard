@@ -18,9 +18,9 @@
             <div class="menu-opciones" id="mostrar">
                 <div class="content-menu">
                     <div class="menu">
-                        <button><p>Cambiar Contraseña</p></button>
+                        <a href="cambiar-contraseña.php" class="camb-contraseña">Cambiar Contraseña</a>
                         <hr>
-                        <button><p>Cerrar Sesión</p></button>
+                        <a href="../index.php" class="cerrar-sesion">Cerrar Sesión</a>
                     </div>
                 </div>
             </div>
@@ -106,13 +106,10 @@
                             </div>
                         </form><br><br><br>
 
-                        <div class="card mb-4 mt-5">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Usuarios Registrados
-                            </div>
-                            <div class="card-body">
-                                <table border='1' id="datatablesSimple">
+                        <div class="content-tabla">
+                                <h4>Usuarios Registrados</h4>
+                            <div class="tabla">
+                                <table>
                                     <thead>
                                         <tr>
                                             <th>#</th>

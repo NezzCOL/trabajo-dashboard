@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -193,21 +193,74 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.menu button {
+.camb-contraseña {
     width: 100%;
     border: none;
     background-color: #f3f3f3;
     cursor: pointer;
     border-radius: 0.3rem;
+    font-size: 13px;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    text-decoration: none;
+    color: #000;
 }
 
-.menu button:active {
+.camb-contraseña:active {
     background-color: #ccc;
 }
 
-.menu button p {
-    margin-top: 0.3rem;
-    margin-bottom: 3px;
-    margin-left: 0.4rem;
-    margin-right: 0.5rem;
+.cerrar-sesion {
+    width: 100%;
+    border: none;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-size: 13px;
+    justify-content: center;
+    padding-left: 2.3rem;
+    padding-right: 2.2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.cerrar-sesion:active {
+    background-color: #ccc;
+}
+
+table {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    background-color: #fff;
+    width: 97.4%;
+    box-shadow: 3px 3px 2px 1px rgba(196, 196, 196, 0.651);
+    border-collapse: collapse;
+}
+
+thead tr th {
+    font-size: 0.9rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    align-items: center;
+    color: #fff;
+    background-color: #ccc;
+    border: 1px solid #000;
+    
+}
+
+tbody tr td{
+    width: 10rem;
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+}
+
+.content-tabla h4{
+    margin-bottom: -2rem;
 }
