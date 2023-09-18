@@ -37,7 +37,7 @@
                     <h1>Registro de Usuario</h1>
 
                     <div class="content-form">
-                        <form action="../validaciones/validaciones-pagina/validaciones-registro-usuarios.php" method="post">
+                        <form action="../validaciones/validaciones-registro-usuarios.php" method="post">
                             <div class="content-form">
                             <div class="tip_doc">
                                 <label for="">Tipo de documento</label><br>
@@ -162,7 +162,7 @@
                                 </table>
                             </div>
                             <?php
-                            include('../../trabajo-dashboard/validaciones/validaciones-pagina/validaciones-registro-usuarios.php')
+                            include('../../trabajo-dashboard/validaciones/validaciones-registro-usuarios.php')
                             ?>
                         </div>
 

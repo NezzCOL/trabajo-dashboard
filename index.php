@@ -60,18 +60,18 @@
 	</svg>
     <div class="content-login">
         <h2>Iniciar Sesión</h2>
-        <form action="../trabajo-dashboard/validaciones/validaciones-de-login-index/validar-index.php" method="post">
+        <?php 
+            include ('validaciones/db.php');
+            include ('validaciones/validar-index.php');
+        ?>
+        <form action="" method="post">
             <div class="usuario">
-                <input type="text" required placeholder="Nombre de usuario" name="usuario">
+                <input type="text" placeholder="Nombre de usuario" name="usuario">
             </div>
             <div class="contraseña">
-                <input type="password" required placeholder="Contraseña" name="contraseña">
+                <input type="password" placeholder="Contraseña" name="contraseña">
             </div>
             <input type="submit" value="Iniciar" name="btn"><br>
-            <?php
-                include("validaciones/validaciones-de-login-index/db.php");
-                include("validaciones/validaciones-de-login-index/validar-index.php");
-            ?>
             <br>
          </form>
     </div>
