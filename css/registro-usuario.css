@@ -35,6 +35,7 @@
     border-radius: 0.5rem;
     background-color: #fff;
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-left: 0.2rem;
 }
 
 .tip_doc select:focus {
@@ -63,6 +64,7 @@
     border-radius: 0.5rem;
     background-color: #fff;
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-left: 0.2rem;
 }
 
 .num-doc input:focus {
@@ -90,6 +92,7 @@
     border-radius: 0.5rem;
     background-color: #fff;
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-left: 0.2rem;
 }
 
 .nombre input:focus {
@@ -115,6 +118,7 @@
     border-radius: 0.5rem;
     background-color: #fff;
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-left: 0.2rem;
 }
 
 .apellido input:focus {
@@ -138,6 +142,7 @@
     border-radius: 0.5rem;
     background-color: #fff;
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-left: 0.2rem;
 }
 
 .correo input:focus {
@@ -163,6 +168,7 @@
     border-radius: 0.5rem;
     background-color: #fff;
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-left: 0.2rem;
 }
 
 .telefono input:focus {
@@ -182,6 +188,7 @@
     border-radius: 0.5rem;
     background-color: #fff;
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-left: 0.2rem;
 }
 
 .rol select:focus {
@@ -211,6 +218,7 @@
     border-radius: 0.5rem;
     background-color: #fff;
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-left: 0.2rem;
 }
 
 .contraseña input:focus {
@@ -234,5 +242,39 @@
 }
 
 .btn input:active {
-    background-color: #fff;
+    background-color: #c0c0c0a8;
+}
+
+.editar {
+    padding: 0.7rem 0.5rem 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.editar i {
+    font-size: 1.5rem;
+}
+
+.editar:hover {
+    background-color: rgba(163, 211, 255, 0.781);
+}
+
+.editar:active {
+    background-color: rgb(149, 204, 255);
+}
+
+.borrar {
+    padding: 0.7rem 0.5rem 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.borrar i {
+    font-size: 1.5rem;
+}
+
+.borrar:hover {
+    background-color: rgba(252, 138, 138, 0.726);
+}
+
+.borrar:active {
+    background-color: rgb(252, 119, 119);
 }

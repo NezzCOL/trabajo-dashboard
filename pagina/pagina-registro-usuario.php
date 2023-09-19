@@ -151,7 +151,8 @@
                                                     ?>
                                                     <td><?php echo $rolRow['descripcion_item'] ?></td>
                                                     <td>
-                                                        
+                                                        <a class="editar"><i class='bx bxs-edit'></i></a>
+                                                        <a class="borrar"><i class='bx bxs-trash'></i></a>
                                                     </td>
                                                 </tr>
                                             <?php

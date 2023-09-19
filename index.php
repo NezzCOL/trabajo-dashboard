@@ -65,8 +65,8 @@
             include ('validaciones/validar-index.php');
         ?>
         <form action="" method="post">
-            <div class="usuario">
-                <input type="text" placeholder="Nombre de usuario" name="usuario">
+            <div class="documento">
+                <input type="number" placeholder="Número de documento" name="documento" class="no-spinners">
             </div>
             <div class="contraseña">
                 <input type="password" placeholder="Contraseña" name="contraseña">
