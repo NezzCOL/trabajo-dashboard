@@ -22,20 +22,27 @@ document.addEventListener('click', (e) => {
 const botonInicio = document.querySelector('.text-1');
 
 botonInicio.addEventListener('click', () => {
-    const Inicio = '../../../trabajo-dashboard/pagina/pagina-inicio.php';
+    const Inicio = '../../trabajo-dashboard/pagina/pagina-inicio.php';
     window.location.href = Inicio;
 });
 
 const botonRegistrarUsuario = document.querySelector('.text-2');
 
 botonRegistrarUsuario.addEventListener('click', () => {
-    const RegistrarUsuario = '../../../trabajo-dashboard/pagina/pagina-registro-usuario.php';
+    const RegistrarUsuario = '../../trabajo-dashboard/pagina/pagina-registro-usuario.php';
     window.location.href = RegistrarUsuario;
 });
 
 const fichas = document.querySelector('.text-3');
 
 fichas.addEventListener('click', () => {
-    const fichas = '../../../trabajo-dashboard/pagina/registro-fichas.php';
+    const fichas = '../../trabajo-dashboard/pagina/registro-fichas.php';
     window.location.href = fichas;
+});
+
+const programas = document.querySelector('.text-4');
+
+programas.addEventListener('click', () => {
+    const programas = '../../trabajo-dashboard/pagina/registro-programa.php';
+    window.location.href = programas;
 });

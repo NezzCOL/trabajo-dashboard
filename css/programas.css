@@ -1,0 +1,83 @@
+.content-programas {
+    display: grid;
+    margin-left: 4.8rem;
+    height: 100vh;
+}
+
+.contenido-form {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+}
+
+.from-programas {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    height: 25vh;
+    text-align: center;
+}
+
+.from-programas h2 {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.nom-programa {
+    width: 20rem;
+    margin-bottom: 1rem;
+    margin-left: 4.8rem;
+}
+
+.nom-programa input {
+    width: 18rem;
+    margin-top: 0.2rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.nom-programa label {
+    margin-right: 8.5rem;
+}
+
+.estado-programa {
+    width: 30rem;
+    margin-left: 2.3rem;
+}
+
+.estado-programa select {
+    width: 8rem;
+    margin-top: 0.2rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    margin-right: 2.5rem;
+}
+
+.estado-programa input {
+    width: 8rem;
+    margin-top: 0.2rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    margin-right: 5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    border-color: rgba(124, 124, 124, 0.747);
+    background-color: #cccccc59;
+}
+
+.estado-programa input:active {
+    background-color: #c0c0c0a8;
+}
+
+.estado-programa label {
+    margin-right: 16rem;
+}

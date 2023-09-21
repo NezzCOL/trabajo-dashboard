@@ -65,9 +65,10 @@ tbody tr td{
 
 .programa {
     margin-right: 0.5rem;
-    padding-left: 18rem;
+    width: 19.8rem;
     margin-top: 0.2rem;
     border-radius: 0.5rem;
+    text-align: center;
 }
 
 .programas {
@@ -130,17 +131,11 @@ tbody tr td{
     width: 8.3rem;
     margin-left: 3rem;
     border-radius: 0.5rem;
-    border: 0.1rem solid;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    margin-top: -15rem;
-}
-
-.enviar-ficha {
-    border-radius: 0.5rem;
-    border-color: rgba(124, 124, 124, 0.747);
     border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    border-color: rgba(124, 124, 124, 0.747);
+    padding-top: 1px;
     padding-bottom: 0.2rem;
+    margin-top: -15rem;
     background-color: #cccccc59;
 }
 

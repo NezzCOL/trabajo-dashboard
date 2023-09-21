@@ -38,9 +38,9 @@
             <button class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
             <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
             <button class="text-3"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
+            <button class="text-4"><i class='bx bx-book'></i></i><p>Programas</p></button>
         </nav>
     </aside>
 </body>
-<script src="../../trabajo-dashboard/js/js-menu-sidebar.js/sidebar.js"></script>
+<script src="../../trabajo-dashboard/js/js-menu-sidebar.js"></script>
 </html>
-<button type="submit"></button>

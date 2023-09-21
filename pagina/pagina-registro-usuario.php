@@ -41,6 +41,7 @@
                 <button class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
                 <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
                 <button class="text-3"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
+                <button class="text-4"><i class='bx bx-book'></i></i><p>Programas</p></button>
             </nav>
             <div class="container">
                 <div class="main-content">
@@ -100,8 +101,8 @@
                                             echo "<option value='".$documento['id']."'>"
                                                 .$documento['descripcion_item'].
                                                 "</option>";
-                                            }
-                                        ?>
+                                        }
+                                    ?>
                                     </select>
                                 </div>
 
@@ -139,7 +140,7 @@
                                         $sql = "SELECT * FROM asistencias";
                                         $result = mysqli_query($conexion, $sql);
                                         while ($mostrar = mysqli_fetch_array($result)) {
-                                            ?>
+                                    ?>
                                                 <tr>
                                                     <td><?php echo $mostrar['id'] ?></td>
                                                     <?php
@@ -184,5 +185,5 @@
         </aside>
     </main>
 </body>
-<script src="../../trabajo-dashboard/js/js-menu-sidebar.js/sidebar.js"></script>
+<script src="../../trabajo-dashboard/js/js-menu-sidebar.js"></script>
 </html>
