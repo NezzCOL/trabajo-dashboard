@@ -1,7 +1,7 @@
 .container {
     display: grid;
     margin-left: 4.8rem;
-    height: 40rem;
+    height: 100vh;
 }
 
 .main-content h1 {
@@ -248,6 +248,7 @@
 .editar {
     padding: 0.7rem 0.5rem 0.3rem 0.5rem;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .editar i {
@@ -263,8 +264,11 @@
 }
 
 .borrar {
+    border: none;
     padding: 0.7rem 0.5rem 0.3rem 0.5rem;
     border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #fff;
 }
 
 .borrar i {
@@ -277,4 +281,8 @@
 
 .borrar:active {
     background-color: rgb(252, 119, 119);
+}
+
+a {
+    text-decoration: none;
 }

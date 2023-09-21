@@ -32,3 +32,10 @@ botonRegistrarUsuario.addEventListener('click', () => {
     const RegistrarUsuario = '../../../trabajo-dashboard/pagina/pagina-registro-usuario.php';
     window.location.href = RegistrarUsuario;
 });
+
+const fichas = document.querySelector('.text-3');
+
+fichas.addEventListener('click', () => {
+    const fichas = '../../../trabajo-dashboard/pagina/registro-fichas.php';
+    window.location.href = fichas;
+});

@@ -1,4 +1,11 @@
-<?php $conexion = mysqli_connect("localhost","root","","login"); ?>
+<?php include('../validaciones/db.php'); ?>
+
+<?php
+    session_start();
+    if (empty($_SESSION['nombre']) and empty($_SESSION['apellido'])) {
+        header('location: ../../../index.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -18,6 +25,8 @@
             <div class="menu-opciones" id="mostrar">
                 <div class="content-menu">
                     <div class="menu">
+                        <h4><?= $_SESSION['nombre']." ".$_SESSION['apellido'] ?></h4>
+                        <hr>
                         <a href="cambiar-contraseña.php" class="camb-contraseña">Cambiar Contraseña</a>
                         <hr>
                         <a href="../index.php" class="cerrar-sesion">Cerrar Sesión</a>
@@ -31,6 +40,7 @@
             <nav class="sidebar" id="aside">
                 <button class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
                 <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
+                <button class="text-3"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
             </nav>
             <div class="container">
                 <div class="main-content">
@@ -128,11 +138,10 @@
                                     <?php
                                         $sql = "SELECT * FROM asistencias";
                                         $result = mysqli_query($conexion, $sql);
-                                        $contador = 1;
                                         while ($mostrar = mysqli_fetch_array($result)) {
                                             ?>
                                                 <tr>
-                                                    <td scope="row"><?php echo $contador?></td>
+                                                    <td><?php echo $mostrar['id'] ?></td>
                                                     <?php
                                                         $typeQuery = "SELECT * FROM sub_items WHERE items_id = 1 AND id = ".$mostrar['documento'];
                                                         $typeResult = mysqli_query($conexion, $typeQuery);
@@ -152,11 +161,13 @@
                                                     <td><?php echo $rolRow['descripcion_item'] ?></td>
                                                     <td>
                                                         <a class="editar"><i class='bx bxs-edit'></i></a>
-                                                        <a class="borrar"><i class='bx bxs-trash'></i></a>
+                                                        <form class="eliminar" action="../validaciones/eliminar.php" method="post">
+                                                            <input type="hidden" name="eliminar" value="<?php echo $mostrar['id'] ?>"></input>
+                                                            <button type="submit" class="borrar"><i class='bx bxs-trash'></i></button>
+                                                        </form>
                                                     </td>
                                                 </tr>
                                             <?php
-                                            $contador++;
                                         }
                                     ?>
                                     </tbody>

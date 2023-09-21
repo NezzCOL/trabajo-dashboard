@@ -1,0 +1,149 @@
+.content-fichas {
+    display: grid;
+    margin-left: 4.8rem;
+    height: 100vh;
+}
+
+.contenido {
+    margin-bottom: 2rem;
+}
+
+.from-fichas {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    height: 25vh;
+    text-align: center;
+}
+
+.from-fichas h2 {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+table {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    background-color: #fff;
+    width: 97.4%;
+    box-shadow: 3px 3px 2px 1px rgba(196, 196, 196, 0.651);
+    border-collapse: collapse;
+}
+
+thead tr th {
+    font-size: 0.9rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    align-items: center;
+    color: #fff;
+    background-color: #ccc;
+    border: 1px solid #000;
+    
+}
+
+tbody tr td{
+    width: 10rem;
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+}
+
+.content-tabla h4{
+    margin-bottom: -2rem;
+}
+
+.tabla {
+    margin-bottom: 3rem;
+}
+
+.programas label {
+    margin-right: 15rem;
+}
+
+.programa {
+    margin-right: 0.5rem;
+    padding-left: 18rem;
+    margin-top: 0.2rem;
+    border-radius: 0.5rem;
+}
+
+.programas {
+    margin-bottom: 0.5rem;
+}
+
+.numero-ficha label {
+    margin-left: 8rem;
+}
+
+.numero-ficha input {
+    margin-left: 8.2rem;
+    width: 8rem;
+    margin-top: 0.2rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid;
+    padding-left: 0.5rem;
+}
+
+.numero-ficha {
+    margin-right: 20rem;
+    margin-bottom: 0.5rem;
+}
+
+.alias-ficha {
+    margin-left: 10rem;
+    margin-top: -3.2rem;
+}
+
+.alias-ficha input {
+    margin-left: 0.8rem;
+    width: 8rem;
+    margin-top: 0.2rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid;
+    padding-left: 0.5rem;
+}
+
+.alias-ficha label {
+    margin-right: 1.3rem;
+}
+
+.estado-ficha {
+    margin-top: 0.6rem;
+    margin-right: 1rem;
+}
+
+.estado-ficha select {
+    margin-left: 0.5rem;
+    width: 8.3rem;
+    margin-top: 0.2rem;
+    border-radius: 0.5rem;
+}
+
+.estado-ficha label {
+    margin-right: 13.5rem;
+}
+
+.enviar-ficha {
+    width: 8.3rem;
+    margin-left: 3rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: -15rem;
+}
+
+.enviar-ficha {
+    border-radius: 0.5rem;
+    border-color: rgba(124, 124, 124, 0.747);
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    padding-bottom: 0.2rem;
+    background-color: #cccccc59;
+}
+
+.enviar-ficha:active {
+    background-color: #c0c0c0a8;
+}
