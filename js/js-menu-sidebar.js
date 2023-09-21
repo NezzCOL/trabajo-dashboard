@@ -46,3 +46,10 @@ programas.addEventListener('click', () => {
     const programas = '../../trabajo-dashboard/pagina/registro-programa.php';
     window.location.href = programas;
 });
+
+const instructor = document.querySelector('.text-5');
+
+instructor.addEventListener('click', () => {
+    const instructor = '../../trabajo-dashboard/pagina/registro-instructor.php';
+    window.location.href = instructor;
+});

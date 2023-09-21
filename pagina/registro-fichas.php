@@ -40,6 +40,7 @@
             <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
             <button class="text-3"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
             <button class="text-4"><i class='bx bx-book'></i></i><p>Programas</p></button>
+            <button class="text-5"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
         </nav>
         <div class="content-fichas">
             <div class="from-fichas">
@@ -115,7 +116,7 @@
                                             <td><?php echo $mostrar['estado_ficha'] ?></td>
                                             <td>
                                                 <a class="editar"><i class='bx bxs-edit'></i></a>
-                                                <form class="eliminar" action="../validaciones/eliminar.php" method="post">
+                                                <form class="eliminar" action="../validaciones/eliminar-ficha.php" method="post">
                                                     <input type="hidden" name="eliminar" value="<?php echo $mostrar['id'] ?>"></input>
                                                     <button type="submit" class="borrar"><i class='bx bxs-trash'></i></button>
                                                 </form>

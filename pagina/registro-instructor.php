@@ -1,3 +1,4 @@
+<?php include('../validaciones/db.php'); ?>
 
 <?php
     session_start();
@@ -14,6 +15,7 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="../css/style-pagina-inicio.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/instructor.css">
 </head>
 <body>
     <header class="content-navbar">
@@ -41,6 +43,25 @@
             <button class="text-4"><i class='bx bx-book'></i><p>Programas</p></button>
             <button class="text-5"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
         </nav>
+        <div class="content-instructor">
+            <div class="from-instructor">
+                <h2>Registro de instructores</h2>
+                <form class="" action="../validaciones/validacion-intructor.php" method="post">
+                    <div class="nom-instructor">
+                        <label>Nombre del Instructor</label><br>
+                        <select name="instructor">
+                        </select>
+                    </div>
+
+                    <div class="num-ficha">
+                        <label>Número de ficha</label><br>
+                        <select name="num-ficha">
+                        </select>
+                    </div>
+                    <input type="submit" value="registrar" name="registrar">
+                </form>
+            </div>
+        </div>
     </aside>
 </body>
 <script src="../../trabajo-dashboard/js/js-menu-sidebar.js"></script>
