@@ -1,4 +1,4 @@
-<?php include('../validaciones/db.php'); ?>
+<?php $conexion = mysqli_connect("localhost","root","","login"); ?>
 
 <?php
     session_start();
@@ -46,20 +46,84 @@
         <div class="content-instructor">
             <div class="from-instructor">
                 <h2>Registro de instructores</h2>
-                <form class="" action="../validaciones/validacion-intructor.php" method="post">
+                <form class="instructor" action="../validaciones/validacion-intructor.php" method="post">
                     <div class="nom-instructor">
                         <label>Nombre del Instructor</label><br>
                         <select name="instructor">
+                            <?php
+                                $aprendices = "SELECT * FROM asistencias where rol = 6";
+                                $query = mysqli_query($conexion, $aprendices);
+
+                                while ($datos = mysqli_fetch_array($query)) {
+                                    echo '<option value="' . $datos['id'] . '" >
+                                    ' . $datos['nombre'] . " " . $datos['apellido'] . ' 
+                                    </option>';
+                                }
+                            ?>
                         </select>
                     </div>
 
                     <div class="num-ficha">
-                        <label>Número de ficha</label><br>
-                        <select name="num-ficha">
-                        </select>
+                        <div class="select">
+                            <label>Número de ficha</label>
+                            <select name="num-ficha">
+                                <?php
+                                    $fichas = "SELECT * FROM `fichas`";
+                                    $consulta = mysqli_query($conexion, $fichas);
+
+                                    while ($ficha = mysqli_fetch_array($consulta)) {
+                                        echo "<option value='" . $ficha['id'] . "' >" . $ficha['ficha'] . " </option>";
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                        
+                        <input type="submit" value="registrar" name="registrar">
                     </div>
-                    <input type="submit" value="registrar" name="registrar">
                 </form>
+                <div class="content-tabla">
+                                <h4>Usuarios Registrados</h4>
+                            <div class="tabla">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Instructor</th>
+                                            <th>Ficha</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <?php
+                                        $sql = "SELECT instructor.id, CONCAT(asistencias.nombre,' ',asistencias.apellido) AS nombreCompleto, fichas.ficha FROM instructor
+                                        INNER JOIN asistencias ON instructor.id_persona = asistencias.id
+                                        INNER JOIN fichas ON instructor.id_fichas = fichas.id";
+                                        $result = mysqli_query($conexion, $sql);
+                                        while ($mostrar = mysqli_fetch_assoc($result)) {
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $mostrar['id'] ?></td>
+                                                <td><?php echo $typeRol['nombreCompleto'] ?></td>
+                                                <td><?php echo $mostrar['ficha'] ?></td>
+                                                <td>
+                                                    <a class="editar"><i class='bx bxs-edit'></i></a>
+                                                    <form class="eliminar" action="../validaciones/eliminar-usuario.php" method="post">
+                                                        <input type="hidden" name="eliminar" value="<?php echo $mostrar['id'] ?>"></input>
+                                                        <button type="submit" class="borrar"><i class='bx bxs-trash'></i></button>
+                                                    </form>
+                                                </td>
+                                                </tr>
+                                            <?php
+                                        }
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <?php
+                            include('../../trabajo-dashboard/validaciones/validaciones-registro-usuarios.php')
+                            ?>
+                        </div>
             </div>
         </div>
     </aside>

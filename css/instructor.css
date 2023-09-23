@@ -22,3 +22,51 @@
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
+
+.nom-instructor {
+    margin-bottom: 1rem;
+}
+
+.nom-instructor select {
+    width: 18rem;
+    margin-top: 0.2rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.nom-instructor label {
+    margin-right: 8.5rem;
+}
+
+.num-ficha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.num-ficha select {
+    width: 80%;
+    margin-top: 0.2rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding: .1rem 0;
+    margin-left: -1.2rem;
+}
+
+.num-ficha input {
+    padding: .2rem 1rem;
+    margin-top: 1.7rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    border-color: rgba(124, 124, 124, 0.747);
+    background-color: #cccccc59;
+}
+
+input:active {
+    background-color: #c0c0c0a8;
+}
