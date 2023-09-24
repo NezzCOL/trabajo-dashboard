@@ -40,6 +40,7 @@
             <button class="text-3"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
             <button class="text-4"><i class='bx bx-book'></i><p>Programas</p></button>
             <button class="text-5"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
+            <button class="text-6"><i class='bx bx-user-plus' style='color:#ffffff'  ></i><p>Aprendiz</p></button>
         </nav>
     </aside>
 </body>

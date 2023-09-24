@@ -53,3 +53,10 @@ instructor.addEventListener('click', () => {
     const instructor = '../../trabajo-dashboard/pagina/registro-instructor.php';
     window.location.href = instructor;
 });
+
+const aprendiz = document.querySelector('.text-6');
+
+aprendiz.addEventListener('click', () => {
+    const aprendiz = '../../trabajo-dashboard/pagina/registro-aprendiz.php';
+    window.location.href = aprendiz;
+});

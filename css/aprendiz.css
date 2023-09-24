@@ -1,0 +1,24 @@
+.content-aprendiz {
+    display: grid;
+    margin-left: 4.8rem;
+    height: 100vh;
+}
+
+.aprendiz {
+    margin-bottom: 2rem;
+}
+
+.from-aprendiz {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    height: 25vh;
+    text-align: center;
+}
+
+.from-fichas h2 {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}

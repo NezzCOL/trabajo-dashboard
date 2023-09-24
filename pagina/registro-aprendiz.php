@@ -15,7 +15,7 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="../css/style-pagina-inicio.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/instructor.css">
+    <link rel="stylesheet" href="../css/aprendiz.css">
 </head>
 <body>
     <header class="content-navbar">
@@ -44,16 +44,16 @@
             <button class="text-5"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
             <button class="text-6"><i class='bx bx-user-plus' style='color:#ffffff'  ></i><p>Aprendiz</p></button>
         </nav>
-        <div class="content-instructor">
-            <div class="from-instructor">
-                <h2>Registro de instructores</h2>
-                <form class="instructor" action="../validaciones/validacion-intructor.php" method="post">
-                    <div class="nom-instructor">
-                        <label>Nombre del Instructor</label><br>
-                        <select name="instructor">
+        <div class="content-aprendiz">
+            <div class="from-aprendiz">
+                <h2>Registro de Aprendiz</h2>
+                <form class="aprendiz" action="../validaciones/validacion-aprendiz.php" method="post">
+                    <div class="nom-aprendiz">
+                        <label>Nombre del Aprendiz</label><br>
+                        <select name="aprendiz">
                             <?php
-                                $aprendices = "SELECT * FROM asistencias where rol = 6";
-                                $query = mysqli_query($conexion, $aprendices);
+                                $aprendiz = "SELECT * FROM asistencias where rol = 5";
+                                $query = mysqli_query($conexion, $aprendiz);
 
                                 while ($datos = mysqli_fetch_array($query)) {
                                     echo '<option value="' . $datos['id'] . '" >
@@ -65,22 +65,33 @@
                     </div>
 
                     <div class="num-ficha">
-                        <div class="select">
-                            <label>Número de ficha</label>
-                            <select name="num-ficha">
-                                <?php
-                                    $fichas = "SELECT * FROM `fichas`";
-                                    $consulta = mysqli_query($conexion, $fichas);
+                        <label>Número de ficha</label>
+                        <select name="num-ficha">
+                            <?php
+                                $fichas = "SELECT * FROM `fichas`";
+                                $consulta = mysqli_query($conexion, $fichas);
 
-                                    while ($ficha = mysqli_fetch_array($consulta)) {
-                                        echo "<option value='" . $ficha['id'] . "' >" . $ficha['ficha'] . " </option>";
-                                    }
-                                ?>
-                            </select>
-                        </div>
-                        
-                        <input type="submit" value="registrar" name="registrar_instructor">
+                                while ($ficha = mysqli_fetch_array($consulta)) {
+                                    echo "<option value='" . $ficha['id'] . "' >" . $ficha['ficha'] . " </option>";
+                                }
+                            ?>
+                        </select>
                     </div>
+                    <div class="estado">
+                        <label>Estado</label>
+                        <select name="estado">
+                        <?php
+                            $estado_ficha = 'Select * from sub_items where items_id = 5';
+                            $query = mysqli_query($conexion, $estado_ficha);
+                            while ($ficha = mysqli_fetch_array($query)) {
+                                echo "<option value='".$ficha['id']."'>"
+                                    .$ficha['descripcion_item'].
+                                    "</option>";
+                            }
+                        ?>
+                        </select>
+                    </div>
+                    <input type="submit" value="registrar" name="registrar_instructor">
                 </form>
                 <div class="content-tabla">
                         <h4>Usuarios Registrados</h4>
@@ -97,15 +108,16 @@
                             <tbody>
 
                             <?php
-                                $sql = "SELECT instructor.id, CONCAT(asistencias.nombre,' ',asistencias.apellido) AS nombreCompleto, 
-                                fichas.ficha FROM instructor INNER JOIN asistencias ON instructor.id_persona = asistencias.id
-                                INNER JOIN fichas ON instructor.id_ficha = fichas.id";
+                                $sql = "SELECT aprendiz.id, CONCAT(asistencias.nombre,' ',asistencias.apellido) AS nombreCompleto, 
+                                fichas.ficha FROM aprendiz INNER JOIN asistencias ON aprendiz.id_persona = asistencias.id
+                                INNER JOIN fichas ON aprendiz.id_ficha = fichas.id";
                                 $result = mysqli_query($conexion, $sql);
                                 while ($mostrar = mysqli_fetch_assoc($result)) {
                                     ?>
                                     <tr>
                                         <td><?php echo $mostrar['id'] ?></td>
                                         <td><?php echo $mostrar['nombreCompleto'] ?></td>
+                                        <td><?php echo $mostrar['ficha'] ?></td>
                                         <td><?php echo $mostrar['ficha'] ?></td>
                                         <td>
                                             <a class="editar"><i class='bx bxs-edit'></i></a>
