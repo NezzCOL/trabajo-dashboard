@@ -91,7 +91,7 @@
                         ?>
                         </select>
                     </div>
-                    <input type="submit" value="registrar" name="registrar_instructor">
+                    <input type="submit" value="registrar" name="registrar_aprendiz">
                 </form>
                 <div class="content-tabla">
                         <h4>Usuarios Registrados</h4>
@@ -100,8 +100,9 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Instructor</th>
+                                    <th>Aprendiz</th>
                                     <th>Ficha</th>
+                                    <th>estado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -118,7 +119,12 @@
                                         <td><?php echo $mostrar['id'] ?></td>
                                         <td><?php echo $mostrar['nombreCompleto'] ?></td>
                                         <td><?php echo $mostrar['ficha'] ?></td>
-                                        <td><?php echo $mostrar['ficha'] ?></td>
+                                        <?php
+                                            $Query = "SELECT * FROM sub_items where items_id = 5 AND id = ".$mostrar['estado'];
+                                            $estadoResult = mysqli_query($conexion, $estadoResult);
+                                            $estado = mysqli_fetch_assoc($estadoResult);
+                                        ?>
+                                        <td><?php echo $estado['estado'] ?></td>
                                         <td>
                                             <a class="editar"><i class='bx bxs-edit'></i></a>
                                             <form class="eliminar" action="../validaciones/eliminar-instructor.php" method="post">
