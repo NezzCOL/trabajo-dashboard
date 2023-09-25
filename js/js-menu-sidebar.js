@@ -60,3 +60,10 @@ aprendiz.addEventListener('click', () => {
     const aprendiz = '../../trabajo-dashboard/pagina/registro-aprendiz.php';
     window.location.href = aprendiz;
 });
+
+const asistencias = document.querySelector('.text-7');
+
+asistencias.addEventListener('click', () => {
+    const asistencias = '../../trabajo-dashboard/pagina/registro-asistencias.php';
+    window.location.href = asistencias;
+});

@@ -18,7 +18,76 @@
     text-align: center;
 }
 
-.from-fichas h2 {
+.from-aprendiz h2 {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+}
+
+.nom-aprendiz {
+    margin-bottom: .5rem;
+}
+
+.nom-aprendiz select {
+    width: 18rem;
+    margin-top: 0.2rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.nom-aprendiz label {
+    margin-right: 8.5rem;
+}
+
+.num-ficha {
+    margin-bottom: .5rem;
+}
+
+.num-ficha select {
+    width: 18rem;
+    margin-top: 0.2rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.num-ficha label {
+    margin-right: 10.5rem;
+}
+
+.estado {
+    margin-bottom: .5rem;
+}
+
+.estado select {
+    width: 18rem;
+    margin-top: 0.2rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.estado label {
+    margin-right: 14.5rem;
+}
+
+.registrar_aprendiz {
+    width: 8.3rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(128, 128, 128, 0.500);
+    border-color: rgba(124, 124, 124, 0.747);
+    padding-top: 1px;
+    padding-bottom: 0.2rem;
+    margin-top: .5rem;
+    background-color: #cccccc59;
+}
+
+.registrar_aprendiz:active {
+    background-color: #c0c0c0a8;
 }

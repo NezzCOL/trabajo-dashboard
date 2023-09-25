@@ -11,7 +11,7 @@
             strlen($num_ficha) >= 1 &&
             strlen($estado) >= 1
         ) {
-            $consulta = "INSERT INTO `aprendiz`(`id_persona`, `id_ficha`, `estado`) 
+            $consulta = "INSERT INTO `aprendiz`(`id_persona`, `id_ficha`, `estado_aprendiz`) 
             VALUES ('$aprendiz','$num_ficha','$estado')";
 
             $resultado = mysqli_query($conexion, $consulta);

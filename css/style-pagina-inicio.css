@@ -219,6 +219,28 @@ body {
     margin-left: 1.9rem;
 }
 
+.sidebar .text-7 {
+    margin-top: 1rem;
+    width: 80%;
+    border-radius: 0.6rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background-color: rgb(131, 131, 131, 0.500);
+        color: #fff;
+    }
+}
+
+.sidebar .text-7 p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-left: 1.9rem;
+}
+
 .desplegar {
     transform: translateX(-68%);
     transition: 0.3s;
@@ -245,6 +267,10 @@ body {
 }
 
 .desplegar .text-6 p {
+    display: none;
+}
+
+.desplegar .text-7 p {
     display: none;
 }
 
@@ -284,6 +310,12 @@ body {
     transition: 0.3s;
 }
 
+.desplegar .text-7 {
+    width: 20%;
+    margin-left: 10rem;
+    transition: 0.3s;
+}
+
 .desplegar .text-1 i {
     margin-top: 0.5rem;
     margin-bottom: 5px;
@@ -310,6 +342,11 @@ body {
 }
 
 .desplegar .text-6 i {
+    margin-top: 0.5rem;
+    margin-bottom: 5px;
+}
+
+.desplegar .text-7 i {
     margin-top: 0.5rem;
     margin-bottom: 5px;
 }
