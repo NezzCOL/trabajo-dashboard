@@ -6,20 +6,21 @@
         $num_ficha = $_POST['num-ficha'];
         $estado = $_POST['estado'];
 
+        $aprendices = "SELECT * FROM aprendiz where id_persona = '$aprendiz'";
+        $query = mysqli_query($conexion, $aprendices);
+
         if (
             strlen($aprendiz) >= 1 &&
             strlen($num_ficha) >= 1 &&
             strlen($estado) >= 1
         ) {
-            $consulta = "INSERT INTO `aprendiz`(`id_persona`, `id_ficha`, `estado_aprendiz`) 
-            VALUES ('$aprendiz','$num_ficha','$estado')";
-
-            $resultado = mysqli_query($conexion, $consulta);
-
-            if ($resultado) {
-                header("Location: ../../../../trabajo-dashboard/pagina/registro-aprendiz.php");
+            if (mysqli_num_rows($query) > 0) {
+                echo 'Los datos del usuario que intenta actualizar, ya están registrados.';
             } else {
-                echo "Error en la inserción de datos: " . mysqli_error($conexion);
+                $consulta = "INSERT INTO `aprendiz`(`id_persona`, `id_ficha`, `estado_aprendiz`) 
+                VALUES ('$aprendiz','$num_ficha','$estado')";
+                $resultado = mysqli_query($conexion, $consulta);
+                header("Location: ../../../../trabajo-dashboard/pagina/registro-aprendiz.php");
             }
         } else {
             echo "Por favor, complete todos los campos del formulario.";

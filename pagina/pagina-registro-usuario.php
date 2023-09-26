@@ -71,27 +71,27 @@
 
                                 <div class="num-doc">
                                     <label for="">Número de documento</label><br>
-                                    <input type="number" name="num-doc" required>
+                                    <input type="number" name="num-doc">
                                 </div>
 
                                 <div class="nombre">
                                     <label for="">Nombre</label><br>
-                                    <input type="text" name="nombre" required>
+                                    <input type="text" name="nombre">
                                 </div>
 
                                 <div class="apellido">
                                     <label for="">Apellidos</label><br>
-                                    <input type="text" name="apellido" required>
+                                    <input type="text" name="apellido">
                                 </div>
 
                                 <div class="correo">
                                     <label for="">Correo</label><br>
-                                    <input type="email" name="correo" required>
+                                    <input type="email" name="correo">
                                 </div>
 
                                 <div class="telefono">
                                     <label for="">Telefono</label><br>
-                                    <input type="number" name="telefono" required>
+                                    <input type="number" name="telefono">
                                 </div>
 
                                 <div class="rol">
@@ -111,7 +111,7 @@
 
                                 <div class="contraseña">
                                     <label for="">Contraseña</label><br>
-                                    <input type="password" name="contraseña" required>
+                                    <input type="password" name="contraseña">
                                 </div>
                                 
                                 <div class="btn">

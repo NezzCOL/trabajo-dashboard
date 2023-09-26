@@ -5,19 +5,20 @@
         $programa = $_POST['nombre-programa'];
         $estado_programa = $_POST['estado-programa'];
 
+        $programas = "SELECT * FROM programa where nombre_programa = '$programa'";
+        $query = mysqli_query($conexion, $programas);
+
         if (
             strlen($programa) >= 1 &&
             strlen($estado_programa) >= 1
         ) {
-            $consulta = "INSERT INTO `programa`(`nombre_programa`, `estado_programa`) 
-            VALUES ('$programa','$estado_programa')";
-
-            $resultado = mysqli_query($conexion, $consulta);
-
-            if ($resultado) {
-                header("Location: ../../../../trabajo-dashboard/pagina/registro-programa.php");
+            if (mysqli_num_rows($query) > 0) {
+                echo 'Los datos del programa que intenta actualizar, ya están registrados.';
             } else {
-                echo "Error en la inserción de datos: " . mysqli_error($conexion);
+                $consulta = "INSERT INTO `programa`(`nombre_programa`, `estado_programa`) 
+                VALUES ('$programa','$estado_programa')";
+                $resultado = mysqli_query($conexion, $consulta);
+                header("Location: ../../../../trabajo-dashboard/pagina/registro-programa.php");
             }
         } else {
             echo "Por favor, complete todos los campos del formulario.";

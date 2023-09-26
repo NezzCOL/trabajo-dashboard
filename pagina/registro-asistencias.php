@@ -47,7 +47,7 @@
         </nav>
         <div class="content-asistencias">
             <div class="from-asistencias">
-                <h2>Registrar Programas</h2>
+                <h2>Registrar Asistencias</h2>
                 <form class="contenido-form" action="../validaciones/validacion-programa.php" method="post">
                     <div class="nom-aprendiz">
                         <label>Nombre del programa</label><br>
