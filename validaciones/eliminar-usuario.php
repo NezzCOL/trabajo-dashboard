@@ -7,7 +7,7 @@
         $eliminar = "DELETE FROM asistencias where id = $usuario";
 
         if (mysqli_query($conexion,$eliminar)) {
-            header('location: ../pagina/pagina-registro-usuario.php');
+            header('location: ../paginas-coordinador/pagina-registro-usuario.php');
         } else {
             echo 'error al eliminar usuario' . mysqli_error($conexion);
         }

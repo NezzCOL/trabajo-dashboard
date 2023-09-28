@@ -64,7 +64,7 @@
             include ('validaciones/db.php');
             include ('validaciones/validar-index.php');
         ?>
-        <form action="" method="post">
+        <form action="../trabajo-dashboard/validaciones/validar-index.php" method="post">
             <div class="documento">
                 <input type="number" placeholder="Número de documento" name="documento" class="no-spinners">
             </div>

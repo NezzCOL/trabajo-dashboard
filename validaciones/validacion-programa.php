@@ -18,7 +18,7 @@
                 $consulta = "INSERT INTO `programa`(`nombre_programa`, `estado_programa`) 
                 VALUES ('$programa','$estado_programa')";
                 $resultado = mysqli_query($conexion, $consulta);
-                header("Location: ../../../../trabajo-dashboard/pagina/registro-programa.php");
+                header("Location: ../../../../trabajo-dashboard/paginas-coordinador/registro-programa.php");
             }
         } else {
             echo "Por favor, complete todos los campos del formulario.";

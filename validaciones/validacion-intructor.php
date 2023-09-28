@@ -18,7 +18,7 @@
                 $consulta = "INSERT INTO `instructor`(`id_persona`, `id_ficha`) 
                 VALUES ('$instructor','$num_ficha')";
                 $resultado = mysqli_query($conexion, $consulta);
-                header("Location: ../../../../trabajo-dashboard/pagina/registro-instructor.php");
+                header("Location: ../../../../trabajo-dashboard/paginas-coordinador/registro-instructor.php");
             }
         } else {
             echo "Por favor, complete todos los campos del formulario.";

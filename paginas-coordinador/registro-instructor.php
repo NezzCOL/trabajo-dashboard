@@ -13,9 +13,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="../css/style-pagina-inicio.css">
+    <link rel="stylesheet" href="../css/css-coordinador/style-pagina-inicio.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/instructor.css">
+    <link rel="stylesheet" href="../css/css-coordinador/instructor.css">
 </head>
 <body>
     <header class="content-navbar">
@@ -43,7 +43,6 @@
             <button class="text-4"><i class='bx bx-book'></i><p>Programas</p></button>
             <button class="text-5"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
             <button class="text-6"><i class='bx bx-user-plus' style='color:#ffffff'  ></i><p>Aprendiz</p></button>
-            <button class="text-7"><i class='bx bxs-user-detail' style='color:#ffffff'  ></i><p>Asistencias</p></button>
         </nav>
         <div class="content-instructor">
             <div class="from-instructor">

@@ -6,19 +6,20 @@
         header('location: ../../../index.php');
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Fichas</title>
-    <link rel="stylesheet" href="../css/style-pagina-inicio.css">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/css-coordinador/style-pagina-inicio.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/fichas.css">
+    <link rel="stylesheet" href="../css/css-coordinador/programas.css">
 </head>
 <body>
     <header class="content-navbar">
-        <nav class="navbar">  
+        <nav class="navbar"> 
             <button class="button-icon1" id="open-close"><i class='bx bx-menu'></i></button>
             <button class="button-icon2" id="open-ajustes"><i class='bx bxs-cog'></i></button>
             <div class="menu-opciones" id="mostrar">
@@ -28,7 +29,7 @@
                         <hr>
                         <a href="cambiar-contraseña.php" class="camb-contraseña">Cambiar Contraseña</a>
                         <hr>
-                        <a href="../index.php" class="cerrar-sesion">Cerrar Sesión</a>
+                        <a href="../validaciones/cerrar-sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
                     </div>
                 </div>
             </div>
@@ -39,43 +40,24 @@
             <button class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
             <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
             <button class="text-3"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
-            <button class="text-4"><i class='bx bx-book'></i></i><p>Programas</p></button>
+            <button class="text-4"><i class='bx bx-book'></i><p>Programas</p></button>
             <button class="text-5"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
             <button class="text-6"><i class='bx bx-user-plus' style='color:#ffffff'  ></i><p>Aprendiz</p></button>
-            <button class="text-7"><i class='bx bxs-user-detail' style='color:#ffffff'  ></i><p>Asistencias</p></button>
         </nav>
-        <div class="content-fichas">
-            <div class="from-fichas">
-                <h2>Registrar ficha</h2>
-                <form class="contenido" action="../validaciones/validacion-ficha.php" method="post">
-                    <div class="programas">
-                        <label>Programas</label><br>
-                        <select name="programa" class="programa">
+        <div class="content-programas">
+            <div class="from-programas">
+                <h2>Registrar Programas</h2>
+                <form class="contenido-form" action="../validaciones/validacion-programa.php" method="post">
+                    <div class="nom-programa">
+                        <label>Nombre del programa</label><br>
+                        <input type="text" require placeholder="Ingrese un nombre" name="nombre-programa">
+                    </div>
+                    <div class="estado-programa">
+                        <label>Estado programa</label><br>
+                        <select name="estado-programa">
                         <?php
-                            $programas = 'Select * from programa where nombre_programa = nombre_programa';
-                            $query = mysqli_query($conexion, $programas);
-                            while ($ficha = mysqli_fetch_array($query)) {
-                                echo "<option value='".$ficha['id']."'>"
-                                    .$ficha['nombre_programa'].
-                                    "</option>";
-                            }
-                        ?>
-                        </select>
-                    </div>
-                    <div class="numero-ficha">
-                        <label>Número de fichas</label><br>
-                        <input type="number" name="numero-ficha" require placeholder="Número de ficha">
-                    </div>
-                    <div class="alias-ficha">
-                        <label>Alias de ficha</label><br>
-                        <input type="text" name="alias-ficha" require placeholder="Alias de ficha">
-                    </div>
-                    <div class="estado-ficha">
-                        <label>Estado ficha</label><br>
-                        <select name="estado" id="estado">
-                        <?php
-                            $estado_ficha = 'Select * from sub_items where items_id = 3';
-                            $query = mysqli_query($conexion, $estado_ficha);
+                            $estado_programa = 'Select * from sub_items where items_id = 4';
+                            $query = mysqli_query($conexion, $estado_programa);
                             while ($ficha = mysqli_fetch_array($query)) {
                                 echo "<option value='".$ficha['id']."'>"
                                     .$ficha['descripcion_item'].
@@ -83,42 +65,40 @@
                             }
                         ?>
                         </select>
-
-                        <input type="submit" value="Ingresar ficha" class="enviar-ficha" name='Ingresar-ficha'>
+                        
+                        <input type="submit" value="Registrar programa" class="enviar-programa" name='Ingresar-programa'>
                     </div>
                 </form>
                 <div class="content-tabla">
-                    <h4>Registro de fichas</h4>
+                    <h4>Registro de Programas</h4>
                     <div class="tabla">
                         <table>
                             <thead>
                                 <tr>
                                     <th>#</th>
                                     <th>programa</th>
-                                    <th>Número de Ficha</th>
-                                    <th>Alias</th>
                                     <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                             <?php
-                                $consult = 'SELECT f.id, p.nombre_programa AS programa, f.ficha, f.alias, s_estado.descripcion_item AS estado_ficha
-                                FROM fichas f
-                                JOIN programa p ON f.id_programa = p.id
-                                JOIN sub_items s_estado ON f.estado_ficha=s_estado.id ';
-                                $query = mysqli_query($conexion, $consult);
-                                while ($mostrar = mysqli_fetch_array($query)){
+                                $sql = "SELECT * FROM programa";
+                                $result = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($result)) {
                             ?>
                                         <tr>
                                             <td><?php echo $mostrar['id'] ?></td>
-                                            <td><?php echo $mostrar['programa'] ?></td>
-                                            <td><?php echo $mostrar['ficha'] ?></td>
-                                            <td><?php echo $mostrar['alias'] ?></td>
-                                            <td><?php echo $mostrar['estado_ficha'] ?></td>
+                                            <td><?php echo $mostrar['nombre_programa'] ?></td>
+                                            <?php
+                                                $estado_ficha = "SELECT * FROM sub_items WHERE items_id = 4 AND id = ".$mostrar['estado_programa'];
+                                                $estado_Result = mysqli_query($conexion, $estado_ficha);
+                                                $estado = mysqli_fetch_assoc($estado_Result);
+                                            ?>
+                                            <td><?php echo $estado['descripcion_item'] ?></td>
                                             <td>
                                                 <a class="editar"><i class='bx bxs-edit'></i></a>
-                                                <form class="eliminar" action="../validaciones/eliminar-ficha.php" method="post">
+                                                <form class="eliminar" action="../validaciones/eliminar-programa.php" method="post">
                                                     <input type="hidden" name="eliminar" value="<?php echo $mostrar['id'] ?>"></input>
                                                     <button type="submit" class="borrar"><i class='bx bxs-trash'></i></button>
                                                 </form>
@@ -131,6 +111,7 @@
                         </table>
                     </div>
                 </div>
+            </div>
         </div>
     </aside>
 </body>

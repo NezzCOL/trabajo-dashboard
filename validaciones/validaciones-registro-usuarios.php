@@ -31,7 +31,7 @@
                 $consulta = "INSERT INTO asistencias(documento, numero_documento, nombre, apellido, correo, telefono, rol, contraseña) 
                 VALUES ('$tip_doc','$num_doc','$nombre','$apellido','$correo','$telefono','$rol','$MD5contraseña')";
                 $resultado = mysqli_query($conexion, $consulta);
-                header("location: ../../../../trabajo-dashboard/pagina/pagina-registro-usuario.php");
+                header("location: ../../../../trabajo-dashboard/paginas-coordinador/pagina-registro-usuario.php");
             } 
         } else {
             echo "Por favor, complete todos los campos del formulario.";

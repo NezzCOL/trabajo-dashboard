@@ -7,7 +7,7 @@
         $eliminar = "DELETE FROM instructor where id = $usuario";
 
         if (mysqli_query($conexion,$eliminar)) {
-            header('location: ../../../../trabajo-dashboard/pagina/registro-instructor.php');
+            header('location: ../../../../trabajo-dashboard/paginas-coordinador/registro-instructor.php');
         } else {
             echo 'error al eliminar usuario' . mysqli_error($conexion);
         }

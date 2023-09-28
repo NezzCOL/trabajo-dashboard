@@ -22,48 +22,41 @@ document.addEventListener('click', (e) => {
 const botonInicio = document.querySelector('.text-1');
 
 botonInicio.addEventListener('click', () => {
-    const Inicio = '../../trabajo-dashboard/pagina/pagina-inicio.php';
+    const Inicio = '../../trabajo-dashboard/paginas-coordinador/pagina-inicio.php';
     window.location.href = Inicio;
 });
 
 const botonRegistrarUsuario = document.querySelector('.text-2');
 
 botonRegistrarUsuario.addEventListener('click', () => {
-    const RegistrarUsuario = '../../trabajo-dashboard/pagina/pagina-registro-usuario.php';
+    const RegistrarUsuario = '../../trabajo-dashboard/paginas-coordinador/pagina-registro-usuario.php';
     window.location.href = RegistrarUsuario;
 });
 
 const fichas = document.querySelector('.text-3');
 
 fichas.addEventListener('click', () => {
-    const fichas = '../../trabajo-dashboard/pagina/registro-fichas.php';
+    const fichas = '../../trabajo-dashboard/paginas-coordinador/registro-fichas.php';
     window.location.href = fichas;
 });
 
 const programas = document.querySelector('.text-4');
 
 programas.addEventListener('click', () => {
-    const programas = '../../trabajo-dashboard/pagina/registro-programa.php';
+    const programas = '../../trabajo-dashboard/paginas-coordinador/registro-programa.php';
     window.location.href = programas;
 });
 
 const instructor = document.querySelector('.text-5');
 
 instructor.addEventListener('click', () => {
-    const instructor = '../../trabajo-dashboard/pagina/registro-instructor.php';
+    const instructor = '../../trabajo-dashboard/paginas-coordinador/registro-instructor.php';
     window.location.href = instructor;
 });
 
 const aprendiz = document.querySelector('.text-6');
 
 aprendiz.addEventListener('click', () => {
-    const aprendiz = '../../trabajo-dashboard/pagina/registro-aprendiz.php';
+    const aprendiz = '../../trabajo-dashboard/paginas-coordinador/registro-aprendiz.php';
     window.location.href = aprendiz;
-});
-
-const asistencias = document.querySelector('.text-7');
-
-asistencias.addEventListener('click', () => {
-    const asistencias = '../../trabajo-dashboard/pagina/registro-asistencias.php';
-    window.location.href = asistencias;
 });

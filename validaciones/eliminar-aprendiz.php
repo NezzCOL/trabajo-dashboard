@@ -7,7 +7,7 @@
         $eliminar = "DELETE FROM aprendiz where id = $usuario";
 
         if (mysqli_query($conexion,$eliminar)) {
-            header('location: ../../../../trabajo-dashboard/pagina/registro-aprendiz.php');
+            header('location: ../../../../trabajo-dashboard/paginas-coordinador/registro-aprendiz.php');
         } else {
             echo 'error al eliminar usuario' . mysqli_error($conexion);
         }

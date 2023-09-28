@@ -22,7 +22,7 @@
                 $consulta = "INSERT INTO `fichas`(`id_programa`, `ficha`, `alias`, `estado_ficha`) VALUES 
                 ('$programas','$numero_ficha','$alias_ficha','$estado_ficha')";
                 $resultado = mysqli_query($conexion, $consulta);
-                header("Location: ../../../../trabajo-dashboard/pagina/registro-fichas.php");
+                header("Location: ../../../../trabajo-dashboard/paginas-coordinador/registro-fichas.php");
             }
         } else {
             echo "Por favor, complete todos los campos del formulario.";

@@ -20,7 +20,7 @@
                 $consulta = "INSERT INTO `aprendiz`(`id_persona`, `id_ficha`, `estado_aprendiz`) 
                 VALUES ('$aprendiz','$num_ficha','$estado')";
                 $resultado = mysqli_query($conexion, $consulta);
-                header("Location: ../../../../trabajo-dashboard/pagina/registro-aprendiz.php");
+                header("Location: ../../../../trabajo-dashboard/paginas-coordinador/registro-aprendiz.php");
             }
         } else {
             echo "Por favor, complete todos los campos del formulario.";

@@ -7,7 +7,7 @@
         $eliminar = "DELETE FROM fichas where id = $usuario";
 
         if (mysqli_query($conexion,$eliminar)) {
-            header('location: ../../../../trabajo-dashboard/pagina/registro-fichas.php');
+            header('location: ../../../../trabajo-dashboard/paginas-coordinador/registro-fichas.php');
         } else {
             echo 'error al eliminar usuario' . mysqli_error($conexion);
         }

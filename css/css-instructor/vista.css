@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.content-header {
+    width: 100%;
+    height: 100hv;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.navbar .button-icon1 {
+    background: none;
+    font-size: 2rem;
+    width: 2.1rem;
+    margin-left: 1.2rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.500);
+    }
+}
+
+.navbar .button-icon1 i {
+    color: #fff;
+    display: flex;
+    font-size: 1.7rem;
+    justify-content: center;
+}
+
+.navbar .button-icon2 {
+    background: none;
+    font-size: 2rem;
+    width: 2.1rem;
+    margin-left: 93%;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.500);
+    }
+}
+
+.navbar .button-icon2 i {
+    color: #fff;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+.sidebar {
+    margin-top: 3rem;
+    position: fixed;
+    width: 15rem;
+    height: 100%;
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.sidebar .pagina-inst-1 {
+    margin-top: 1.5rem;
+    width: 80%;
+    border-radius: 0.6rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background-color: rgb(131, 131, 131, 0.500);
+        color: #fff;
+    }
+}
+
+.sidebar .pagina-inst-1 p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-left: 1.9rem;
+}
+
+.sidebar i {
+    font-size: 1.5rem;
+    width: 2rem;
+    margin-left: 6px;
+}
+
+.sidebar .pagina-inst-2 {
+    margin-top: 1rem;
+    width: 80%;
+    border-radius: 0.6rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background-color: rgb(131, 131, 131, 0.500);
+        color: #fff;
+    }
+}
+
+.sidebar .pagina-inst-2 p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-left: 1.9rem;
+}
+
+.desplegar {
+    transform: translateX(-68%);
+    transition: 0.3s;
+}
+
+.desplegar .pagina-inst-1 p {
+    display: none;
+}
+
+.desplegar .pagina-inst-2 p {
+    display: none;
+}
+
+.desplegar .pagina-inst-1 {
+    width: 20%;
+    margin-left: 10rem;
+    transition: 0.3s;
+}
+
+.desplegar .pagina-inst-2 {
+    width: 20%;
+    margin-left: 10rem;
+    transition: 0.3s;
+}
+
+.desplegar .pagina-inst-1 i {
+    margin-top: 0.5rem;
+    margin-bottom: 5px;
+}
+
+.desplegar .pagina-inst-2 i {
+    margin-top: 0.5rem;
+    margin-bottom: 5px;
+}
+
+.menu-opciones {
+    position: absolute;
+    top: 100%;
+    right: 1%;
+    width: 13rem; 
+}
+
+.menu h4 {
+    text-align: center;
+}
+
+.menu-opciones {
+    display: none;
+}
+
+.content-menu {
+    background-color: #fff;
+    padding: 1.2rem;
+    margin: 0.6rem;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+.menu hr{
+    border: 0;
+    height: 0.1rem;
+    width: 100%;
+    background: #ccc;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.camb-contraseña {
+    width: 100%;
+    border: none;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-size: 13px;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.camb-contraseña:active {
+    background-color: #ccc;
+}
+
+.cerrar-sesion {
+    width: 100%;
+    border: none;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-size: 13px;
+    justify-content: center;
+    padding-left: 2.3rem;
+    padding-right: 2.2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.cerrar-sesion:active {
+    background-color: #ccc;
+}
+
+table {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    background-color: #fff;
+    width: 97.4%;
+    box-shadow: 3px 3px 2px 1px rgba(196, 196, 196, 0.651);
+    border-collapse: collapse;
+}
+
+thead tr th {
+    font-size: 0.9rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    align-items: center;
+    color: #fff;
+    background-color: #ccc;
+    border: 1px solid #000;
+}
+
+tbody tr td {
+    width: 10rem;
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+}
+
+.content-tabla h4 {
+    margin-bottom: -2rem;
+}
+
+.tabla {
+    margin-bottom: 3rem;
+}
