@@ -115,7 +115,7 @@
                                             <td><?php echo $mostrar['alias'] ?></td>
                                             <td><?php echo $mostrar['estado_ficha'] ?></td>
                                             <td>
-                                                <a class="editar"><i class='bx bxs-edit'></i></a>
+                                                <?php echo "<a href='../validaciones/editar-coordinador/editar-fichas.php?id=".$mostrar['id']."' class='editar' name='enviar'><i class='bx bxs-edit'></i></a>" ?>
                                                 <form class="eliminar" action="../validaciones/eliminar-ficha.php" method="post">
                                                     <input type="hidden" name="eliminar" value="<?php echo $mostrar['id'] ?>"></input>
                                                     <button type="submit" class="borrar"><i class='bx bxs-trash'></i></button>

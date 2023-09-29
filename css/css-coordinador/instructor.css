@@ -70,3 +70,8 @@
 input:active {
     background-color: #c0c0c0a8;
 }
+
+.Regresar {
+    margin-top: 1.5rem;
+    margin-left: 10.5rem;
+}

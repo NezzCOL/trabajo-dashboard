@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Registro Programas</title>
     <link rel="stylesheet" href="../css/css-coordinador/style-pagina-inicio.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/css-coordinador/programas.css">
@@ -96,7 +96,7 @@
                                             ?>
                                             <td><?php echo $estado['descripcion_item'] ?></td>
                                             <td>
-                                                <a class="editar"><i class='bx bxs-edit'></i></a>
+                                            <?php echo "<a href='../validaciones/editar-coordinador/editar-programa.php?id=".$mostrar['id']."' class='editar' name='enviar'><i class='bx bxs-edit'></i></a>" ?>
                                                 <form class="eliminar" action="../validaciones/eliminar-programa.php" method="post">
                                                     <input type="hidden" name="eliminar" value="<?php echo $mostrar['id'] ?>"></input>
                                                     <button type="submit" class="borrar"><i class='bx bxs-trash'></i></button>

@@ -18,10 +18,11 @@
         $telefono = $_POST['telefono'];
         $rol = $_POST['rol'];
         $contraseña = $_POST['contraseña'];
+        $md5contraseña = md5($contraseña);
 
         $sql = "UPDATE asistencias  SET documento = '".$documento."', numero_documento = '".$numero_documento."', 
         nombre = '".$nombre."', apellido = '".$apellido."', correo = '".$correo."', correo = '".$correo."', 
-        telefono = '".$telefono."', rol = '".$rol."', contraseña = '".$contraseña."' where id = '".$id."' ";
+        telefono = '".$telefono."', rol = '".$rol."', contraseña = '".$md5contraseña."' where id = '".$id."' ";
         $resultado = mysqli_query($conexion, $sql);
         
         header('location: ../../../../../trabajo-dashboard/paginas-coordinador/pagina-registro-usuario.php');

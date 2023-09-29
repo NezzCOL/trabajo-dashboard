@@ -394,3 +394,7 @@ tbody tr td {
         background-color: rgba(202, 202, 202, 0.904);
     }
 }
+
+a {
+    text-decoration: none;
+}

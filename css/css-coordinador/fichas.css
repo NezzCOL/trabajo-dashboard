@@ -142,3 +142,7 @@ tbody tr td{
 .enviar-ficha:active {
     background-color: #c0c0c0a8;
 }
+
+.Regresar {
+    margin-left: 9rem;
+}

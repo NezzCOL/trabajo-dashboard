@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Registro Instructor</title>
     <link rel="stylesheet" href="../css/css-coordinador/style-pagina-inicio.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/css-coordinador/instructor.css">
@@ -107,7 +107,7 @@
                                         <td><?php echo $mostrar['nombreCompleto'] ?></td>
                                         <td><?php echo $mostrar['ficha'] ?></td>
                                         <td>
-                                            <a class="editar"><i class='bx bxs-edit'></i></a>
+                                        <?php echo "<a href='../validaciones/editar-coordinador/editar-instructor.php?id=".$mostrar['id']."' class='editar' name='enviar'><i class='bx bxs-edit'></i></a>" ?>
                                             <form class="eliminar" action="../validaciones/eliminar-instructor.php" method="post">
                                                 <input type="hidden" name="eliminar" value="<?php echo $mostrar['id'] ?>"></input>
                                                 <button type="submit" class="borrar"><i class='bx bxs-trash'></i></button>
