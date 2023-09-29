@@ -37,12 +37,11 @@
     </header>
     <aside class="content-sidebar">
         <nav class="sidebar" id="aside">
-            <button class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
-            <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
-            <button class="text-3"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
-            <button class="text-4"><i class='bx bx-book'></i><p>Programas</p></button>
-            <button class="text-5"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
-            <button class="text-6"><i class='bx bx-user-plus' style='color:#ffffff'  ></i><p>Aprendiz</p></button>
+            <button class="text-1"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
+            <button class="text-2"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
+            <button class="text-3"><i class='bx bx-book'></i><p>Programas</p></button>
+            <button class="text-4"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
+            <button class="text-5"><i class='bx bx-user-plus' style='color:#ffffff'  ></i><p>Aprendiz</p></button>
         </nav>
         <div class="content-aprendiz">
             <div class="from-aprendiz">

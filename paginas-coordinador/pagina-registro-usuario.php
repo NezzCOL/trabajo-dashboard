@@ -38,12 +38,11 @@
     <main>
         <aside class="content-sidebar">
             <nav class="sidebar" id="aside">
-                <button class="text-1"><i class='bx bxs-home'></i><p>INICIO</p></button>
-                <button class="text-2"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
-                <button class="text-3"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
-                <button class="text-4"><i class='bx bx-book'></i></i><p>Programas</p></button>
-                <button class="text-5"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
-                <button class="text-6"><i class='bx bx-user-plus' style='color:#ffffff'  ></i><p>Aprendiz</p></button>
+                <button class="text-1"><i class='bx bxs-user'></i><p>Registrar Usuario</p></button>
+                <button class="text-2"><i class='bx bx-add-to-queue'></i><p>Fichas</p></button>
+                <button class="text-3"><i class='bx bx-book'></i></i><p>Programas</p></button>
+                <button class="text-4"><i class='bx bx-clipboard' style='color:#ffffff'  ></i><p>Instructor</p></button>
+                <button class="text-5"><i class='bx bx-user-plus' style='color:#ffffff'  ></i><p>Aprendiz</p></button>
             </nav>
             <div class="container">
                 <div class="main-content">
@@ -162,7 +161,7 @@
                                                     ?>
                                                     <td><?php echo $rolRow['descripcion_item'] ?></td>
                                                     <td>
-                                                        <a class="editar"><i class='bx bxs-edit'></i></a>
+                                                        <?php echo "<a href='../validaciones/editar-coordinador/editar-registro-usuarios.php?id=".$mostrar['id']."' class='editar' name='enviar'><i class='bx bxs-edit'></i></a>" ?>
                                                         <form class="eliminar" action="../validaciones/eliminar-usuario.php" method="post">
                                                             <input type="hidden" name="eliminar" value="<?php echo $mostrar['id'] ?>"></input>
                                                             <button type="submit" class="borrar"><i class='bx bxs-trash'></i></button>

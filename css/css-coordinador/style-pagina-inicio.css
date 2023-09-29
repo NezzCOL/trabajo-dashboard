@@ -82,7 +82,7 @@ body {
 }
 
 .sidebar .text-1 {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     width: 80%;
     border-radius: 0.6rem;
     background-color: transparent;
@@ -100,7 +100,7 @@ body {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    margin-left: 1.9rem;
+    margin-left: 0.8rem;
 }
 
 .sidebar i {
@@ -128,7 +128,7 @@ body {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    margin-left: 0.8rem;
+    margin-left: 1.9rem;
 }
 
 .sidebar .text-3 {
@@ -197,50 +197,6 @@ body {
     margin-left: 1.9rem;
 }
 
-.sidebar .text-6 {
-    margin-top: 1rem;
-    width: 80%;
-    border-radius: 0.6rem;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    &:hover {
-        background-color: rgb(131, 131, 131, 0.500);
-        color: #fff;
-    }
-}
-
-.sidebar .text-6 p {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    margin-left: 1.9rem;
-}
-
-.sidebar .text-7 {
-    margin-top: 1rem;
-    width: 80%;
-    border-radius: 0.6rem;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    &:hover {
-        background-color: rgb(131, 131, 131, 0.500);
-        color: #fff;
-    }
-}
-
-.sidebar .text-7 p {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    margin-left: 1.9rem;
-}
-
 .desplegar {
     transform: translateX(-68%);
     transition: 0.3s;
@@ -263,14 +219,6 @@ body {
 }
 
 .desplegar .text-5 p {
-    display: none;
-}
-
-.desplegar .text-6 p {
-    display: none;
-}
-
-.desplegar .text-7 p {
     display: none;
 }
 
@@ -304,18 +252,6 @@ body {
     transition: 0.3s;
 }
 
-.desplegar .text-6 {
-    width: 20%;
-    margin-left: 10rem;
-    transition: 0.3s;
-}
-
-.desplegar .text-7 {
-    width: 20%;
-    margin-left: 10rem;
-    transition: 0.3s;
-}
-
 .desplegar .text-1 i {
     margin-top: 0.5rem;
     margin-bottom: 5px;
@@ -337,16 +273,6 @@ body {
 }
 
 .desplegar .text-5 i {
-    margin-top: 0.5rem;
-    margin-bottom: 5px;
-}
-
-.desplegar .text-6 i {
-    margin-top: 0.5rem;
-    margin-bottom: 5px;
-}
-
-.desplegar .text-7 i {
     margin-top: 0.5rem;
     margin-bottom: 5px;
 }
@@ -455,4 +381,16 @@ tbody tr td {
 
 .tabla {
     margin-bottom: 3rem;
+}
+
+.Regresar {
+    margin-right: 24.5rem;
+    color: #000;
+    border: .1rem solid rgb(185, 185, 185);
+    padding: .2rem;
+    background-color: rgba(202, 202, 202, 0.589);
+    border-radius: .4rem;
+    &:active {
+        background-color: rgba(202, 202, 202, 0.904);
+    }
 }

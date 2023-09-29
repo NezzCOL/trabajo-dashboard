@@ -15,7 +15,7 @@
                 if ($roles['rol'] == 4) {
                     $_SESSION['nombre'] = $roles['nombre'];
                     $_SESSION['apellido'] = $roles['apellido'];
-                    header("location: ../../../../trabajo-dashboard/paginas-coordinador/pagina-inicio.php");
+                    header("location: ../../../../trabajo-dashboard/paginas-coordinador/pagina-registro-usuario.php");
                 } else if ($roles['rol'] == 6) {
                     $_SESSION['nombre'] = $roles['nombre'];
                     $_SESSION['apellido'] = $roles['apellido'];
